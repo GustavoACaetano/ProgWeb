@@ -83,8 +83,8 @@ function movePeca(){
                 };
             } else{
                 if(pecaid[2] != casa.children[0].id[2]){
-                    pecaSome = casa.children[0]
-                    pecaSome.style.display = "none" // Desavanece a peça
+                    pecaSome = casa.children[0];
+                    pecaSome.style.display = "none"; // Desavanece a peça
                     //casa.removeChild(pecaSome) //Poderia também deletar a peça da casa para não ficar resquícios 
                     
                     casa.append(movendo); //coloca a peça no tabuleiro
