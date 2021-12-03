@@ -2,7 +2,7 @@
 
 const tamanhoCelula = 4.3; //Define o tamanho que vai ser usado para célula
 
-document.body.append(criaTabuleiro()); //Chama a funão de criar e coloca o tabuleiro no corpo da página
+document.body.append(criaTabuleiro()); //Chama a função de criar e coloca o tabuleiro no corpo da página
 
 function criaTabuleiro(){
     const tamanho = 8; //Quantidade de células
@@ -60,7 +60,7 @@ const casas = document.querySelectorAll('.casas'); //Seleciona as células pela 
 function movePeca(){
     pecas.forEach(imagem => {
         imagem.addEventListener('dragstart', () => {
-            imagem.setAttribute('class', 'movendo'); //início do arrastar seta a classe do objeto pra movendo
+            imagem.setAttribute('class', 'movendo'); //Início do arrastar seta a classe do objeto pra movendo
         });
         imagem.addEventListener('dragend', () => { 
             imagem.removeAttribute('class', 'movendo'); //Parar de arrastar remove a classe
