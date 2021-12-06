@@ -2,7 +2,7 @@
 
 const tamanhoCelula = 4.3; //Define o tamanho que vai ser usado para célula
 
-document.body.append(criaTabuleiro()); //Chama a função de criar e coloca o tabuleiro no corpo da página
+document.body.append(criaTabuleiro()); //Chama a funão de criar e coloca o tabuleiro no corpo da página
 
 function criaTabuleiro(){
     const tamanho = 8; //Quantidade de células
@@ -60,7 +60,7 @@ const casas = document.querySelectorAll('.casas'); //Seleciona as células pela 
 function movePeca(){
     pecas.forEach(imagem => {
         imagem.addEventListener('dragstart', () => {
-            imagem.setAttribute('class', 'movendo'); //Início do arrastar seta a classe do objeto pra movendo
+            imagem.setAttribute('class', 'movendo'); //início do arrastar seta a classe do objeto pra movendo
         });
         imagem.addEventListener('dragend', () => { 
             imagem.removeAttribute('class', 'movendo'); //Parar de arrastar remove a classe
@@ -83,17 +83,7 @@ function movePeca(){
                 };
             } else{
                 if(pecaid[2] != casa.children[0].id[2]){
-                    pecaSome = casa.children[0];
-                    pecaSome.style.display = "none"; // Desavanece a peça
-                    //casa.removeChild(pecaSome) //Poderia também deletar a peça da casa para não ficar resquícios 
-                    
-                    casa.append(movendo); //coloca a peça no tabuleiro
-                    movendo.addEventListener('dragend', () => {
-                        movendo.setAttribute('id', `${casaid}${cor}`); //seta o id da peça com o id atual da casa, agora atualizado com a cor
-                    });
-
-/**             TENTATIVA DE ANEXAR A PEÇA NA CASA DA FRENTE
- *                           deu errado
+                    pecaSome = casa.children[0]
 
                     if (pecaid[0] - casa.children[0].id[0] == 1){
                         casaFrenteI = parseInt(pecaid[0]) - 2
@@ -113,12 +103,14 @@ function movePeca(){
 
                     casaFrenteID = casaFrenteI.toString() + casaFrenteJ.toString()
                     casaFrente = document.getElementById(`${casaFrenteID}`)
-                    casaFrente.append(movendo);
+
+                    if (casaFrente.innerHTML == ''){
+                        pecaSome = casa.children[0]
+                        //pecaSome.style.display = "none" // Desavanece a peça
+                        casa.removeChild(pecaSome) //Preferi por deletar a peça da casa para não ficar resquícios 
                     
-                    movendo.addEventListener('dragend', () => {
-                        movendo.setAttribute('id', `${casaid}${cor}`);                    
-                    });
-*/
+                        movendo.setAttribute('id', `${casaid}${cor}`); //seta o id da peça com o id atual da casa, agora atualizado com a cor
+                    }
                 }
             };
         });
