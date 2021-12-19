@@ -68,8 +68,24 @@
             tarefa.append(criaCheckbox());
             tarefa.append(conteudo);
             tarefa.append(criaLixeira());
-            tarefa.append(criaAlteracao());
+            tarefa.append(criaAlteracao(tarefa));
             return tarefa;
+        }
+
+        function criaAlteracao(tarefa){
+            const botao = document.createElement("button");
+            botao.setAttribute("id", "mudar");
+            botao.textContent = "Mudar registro"
+
+            botao.addEventListener("click", () => {
+                const entrada = document.createElement("input");
+                entrada.type = "text";
+                entrada.placeholder = "Novo conteúdo";
+                entrada.addEventListener("change", changeContent);
+                tarefa.append(entrada)
+            });
+
+            return botao
         }
 
         function criaCheckbox() {
@@ -120,15 +136,6 @@
             });
         }
 
-        function criaAlteracao(){
-            const entrada = document.createElement("input");
-            entrada.type = "text";
-            entrada.placeholder = "Novo conteúdo";
-            entrada.addEventListener("change", changeContent);
-
-            return entrada
-        }
-
         function changeContent(evento){
             const input = evento.target;
             const conteudoNovo = input.value;
@@ -136,8 +143,8 @@
             const textoAntigo = tarefa.children[1];
 
             textoAntigo.textContent = conteudoNovo;
-            input.value = "";
-            
+            tarefa.removeChild(input)
+
             withDB(db =>{
                 let id = tarefa.id;
                 let key = parseInt(id.slice(5));
