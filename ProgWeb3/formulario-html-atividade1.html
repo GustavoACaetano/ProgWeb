@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro usuário</title>
+</head>
+<body>
+    <h1>Cadastro Usuário</h1>
+    <form>
+        <fieldset>
+            <legend>1 - Dados pessoais</legend>
+            <label>Nome:</label> <input type="text" id="input-nome">
+            <label>Email:</label> <input type="email" id="input-email">
+            <label>Senha:</label> <input type="password" id="input-senha">
+            <label>Confirmar senha:</label> <input type="password" id="input-confirmar-senha">
+            <label>Idade:</label> <input type="radio" id="input-idade-acima"> <label for="input-idade-acima"> Acima 17</label>
+            <input type="radio" id="input-idade-abaixo"> <label for="input-idade-abaixo">Abaixo ou igual 17</label>
+        </fieldset>
+        <fieldset>
+            <legend>2 - Perfil</legend>
+            <label>Descrição:</label> <textarea></textarea>
+            <label>Perfil trabalho</label> 
+            <select id="select-perfil-trabalho">
+                <option value="end">Front-End Developer</option>
+                <option value="back">Back-End Developer</option>
+                <option value="full">Full Stack Developer</option>
+            </select>
+            <label>Interesses:</label>
+            <input type="checkbox" id="programador"><label for="programador">Programador</label>
+            <input type="checkbox" id="design"><label for="Design">Design</label>
+            <input type="checkbox" id="analista"><label for="Analista">Analista</label>
+        </fieldset>
+        <button type="submit">Enviar dados</button>
+    </form>
+</body>
+</html>
