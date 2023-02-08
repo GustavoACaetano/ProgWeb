@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro usuário</title>
+    <style>
+        body{
+            font-family: "Nunito";
+        }
+
+        #formulario {
+            background-color: rgb(224, 226, 228);
+            width: 300px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-radius: 8px;
+        }
+
+        fieldset{
+            border: none;
+
+        }
+        
+        h2{
+            text-align: center;
+        }
+
+        .inputs{
+            border: 0;
+            font-size: 16px;
+            margin: 0;
+            padding: 5px;
+            outline: 0;
+            height: auto;
+            width: 100%;
+            background-color: rgb(208, 211, 214);
+        }
+
+        #enviar{
+            background-color: rgb(59, 177, 112);
+            color: white;
+            width: 305px;
+            height: 30px;
+            border: none;
+            border-radius: 3px;
+
+        }
+
+        #select-perfil-trabalho{
+            width: 100%;
+            border-color: rgb(208, 211, 214);
+            background-color: rgb(208, 211, 214);
+            color: rgb(90, 90, 113);
+
+        }
+
+        .alternativas-select{
+            color: black;
+        }
+        
+        .numeros{
+            font-size: 18px;
+            background-color: rgb(59, 177, 112);
+            height: 25px;
+            width: 25px;
+            border-radius: 50%;
+            display: inline-flex;
+            justify-content: center;
+            color: white;
+        }
+
+        .titulo{
+            font-size: large;
+        }
+
+        .selecionaveis{
+            color: rgb(60, 60, 60);
+        }
+
+    </style>
+</head>
+<body>
+    
+    <form id="formulario">
+        <h2 id="titulo">Cadastrar usuário</h2>
+        <fieldset>
+            <legend><label class="numeros">1</label> <label class="titulo">Dados pessoais</label> </legend>
+            <label>Nome:</label> <input type="text" id="input-nome" class="inputs"><br>
+            <label>Email:</label> <input type="email" id="input-email" class="inputs"><br>
+            <label>Senha:</label> <input type="password" id="input-senha" class="inputs"><br>
+            <label>Confirmar senha:</label> <input type="password" id="input-confirmar-senha" class="inputs"><br>
+            <label>Idade:</label><br> 
+            <input type="radio" id="input-idade-acima"> <label for="input-idade-acima" class="selecionaveis"> Acima 17</label><br>
+            <input type="radio" id="input-idade-abaixo"> <label for="input-idade-abaixo" class="selecionaveis">Abaixo ou igual 17</label><br>
+        </fieldset>
+        <fieldset>
+            <legend><label class="numeros">2</label> <label class="titulo">Perfil</label></legend>
+            <label>Descrição:</label> <br><textarea class="inputs"></textarea><br>
+            <label>Perfil trabalho</label> <br>
+            <select id="select-perfil-trabalho">
+                <option value="end" class="alternativas-select">Front-End Developer</option>
+                <option value="back" class="alternativas-select">Back-End Developer</option>
+                <option value="full" class="alternativas-select">Full Stack Developer</option>
+            </select><br>
+            <label>Interesses:</label><br>
+            <input type="checkbox" id="programador"><label for="programador" class="selecionaveis">Programador</label><br>
+            <input type="checkbox" id="design"><label for="Design" class="selecionaveis">Design</label><br>
+            <input type="checkbox" id="analista"><label for="Analista" class="selecionaveis">Analista</label><br>
+        </fieldset>
+        <button type="submit" id="enviar">Enviar dados</button>
+    </form>
+</body>
+</html>
