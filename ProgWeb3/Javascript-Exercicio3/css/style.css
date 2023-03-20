@@ -1,0 +1,50 @@
+#div-botoes{
+    text-align: center;
+}
+
+button{
+    border-radius: 6px;
+    border-color: #3AA0FA;
+    background-color: #aef1f1;
+    padding: 4px 30px 4px 30px;
+    border-style: solid;
+    margin: 5px;
+}
+
+#div-aluno{
+    height: auto;
+    border: 2px solid #ACE058;
+    background-color: #DAFAA7;
+    border-radius: 10px;
+    height: 800px;
+    margin: 2%;
+    text-align: center;
+    padding: 1%;
+}
+
+#div-professor{
+    height: auto;
+    border: 2px solid #F07065;
+    background-color: #F2B4AE;
+    border-radius: 10px;
+    height: 800px;
+    margin: 2%;
+    text-align: center;
+    padding: 1%;
+}
+
+.divAluno{
+    border: 2px solid #5DEA7B;
+    background-color: #A7EEB6;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 4px;
+}
+
+.divProfessor{
+    border: 2px solid #E0261F;
+    background-color: #FA8581;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 4px;
+}
