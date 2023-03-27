@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENU</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/dom.js" defer></script>
+</head>
+<body>
+    <header>
+        <button id="menu">Menu</button>
+        <ul id="drop">
+            <li>
+                <a href="home.html"> Home </a>
+            </li>
+            <li>
+                <a href="sobre.html"> Sobre </a>
+            </li>
+            <li>
+                <a href="contato.html"> Contato </a>
+            </li>
+        </ul>
+    </header>
+
+    <form>
+        <legend>Login</legend>
+        <div class="form-divs"> 
+            Usuário:<br>
+            <input type="text" id="itNome"><br>
+            <div id="div-sem-preencher-nome" class="erroPreencher">Usuário deve ser preenchido!</div>
+        </div>
+
+        <div class="form-divs">
+            Senha:<br>
+            <input type="password" id="itSenha"><br>
+            <div id="div-sem-preencher-senha" class="erroPreencher">Senha deve ser preenchida.</div>
+            <div id="div-senha-fora-padrao" class="erroPreencher">Senha deve ter entre 6 a 30 caracteres.</div>
+        </div>
+
+        <br>
+
+        <div class="botao-aut">
+            <button id="autenticar">Autenticar</button>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,95 @@
+* {
+    text-decoration: none;
+}
+
+form {
+    margin-top: 8%;
+    margin-left: 37%;
+    width: 400px;
+    background-color: white;
+}
+
+legend {
+    font-size: 30px;
+    padding: 5%;
+    padding-left: 40px;
+    background-color: rgb(241, 240, 240);
+    font-weight: bold;
+}
+
+button {
+    background-color: rgb(27, 164, 255);
+    border: none;
+    color: white;
+    height: 35px;
+    width: 70%;
+}
+
+.form-divs {
+    padding: 20px;
+    margin-left: 30px;
+}
+
+input {
+    width: 300px;
+    height: 27px;
+    border: solid 2px rgb(241, 240, 240);
+}
+
+.botao-aut {
+    text-align: center;
+    margin-left: -16px;
+    width: 440px;
+}
+
+#menu {
+    background-color: rgb(9, 9, 175);
+    font-size: 20px;
+    width: 110px;
+    height: 60px;
+}
+
+header {
+    background-color: gray;
+    height: 60px;
+}
+
+#drop {
+    list-style: none;
+} 
+
+a {
+    color: white;
+}
+
+ul {
+    position: absolute;
+    top: 52px;
+    left: -32px;
+    right: 1802px;
+}
+
+li {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: gray;
+    font-size: 20px;
+}
+
+#div-sem-preencher-nome {
+    display: none;
+
+}
+
+
+#div-sem-preencher-senha {
+    display: none;
+}
+
+
+#div-senha-fora-padrao {
+    display: none;
+}
+
+.erroPreencher {
+    color: red;
+}
